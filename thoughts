@@ -1,0 +1,10 @@
+On Repetitions.
+Do we have to ensure both repetitions make it to the same train-test split? Or not, because they are actually not the same audio file 
+(just the same features: actor, statement... which are actually not part of the training).
+do we remove the second repetitions? Because Augmentation might be creating even more repetitions (0.0625 chance no transformation is applied at all per augmented file)
+On the other hand, we don't have that much data already.
+
+Second.
+Do we augment only training data? Or both training and testing. If so, do we have to rethink the split ratio.
+We should split data before augmentation. Right? Because we don't want to train our model on variations of the test data. Right?
+While I am not sure about the repetitions, I am fairly sure we should split the data before augmentation.
